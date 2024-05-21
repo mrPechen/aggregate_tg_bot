@@ -35,7 +35,7 @@ def get_storage(config):
 async def main():
     setup_logging()
 
-    config = load_config(".env")
+    config = load_config(".env.example")
     storage = get_storage(config)
 
     bot = Bot(token=config.tg_bot.token, parse_mode="HTML")
